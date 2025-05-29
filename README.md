@@ -1,9 +1,7 @@
-# BirdCLEF [Year] Competition: [Your Project Title/Team Name] 🐦🎵ipynb
+# BirdCLEF 2025 Competition
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Framework-PyTorch/TensorFlow/etc.-orange.svg)](https://pytorch.org/) [![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange)](https://jupyter.org/)
-[![Kaggle Profile](https://img.shields.io/badge/Kaggle--Profile-YourUsername-blue)](https://www.kaggle.com/YourUsername) [![Paper/Report Link](https://img.shields.io/badge/Paper-Link-green)](YOUR_PAPER_OR_REPORT_LINK) A brief, engaging introduction to your project. Mention the competition (BirdCLEF [Year]), the main goal (e.g., bird species classification from audio), and perhaps a one-sentence summary of your approach or key achievement, highlighting that the workflow is demonstrated through Jupyter Notebooks.
+[![Kaggle Profile](https://img.shields.io/badge/Kaggle--Profile-hzkeric-blue)](https://www.kaggle.com/hzkeric) 
 
 ## Table of Contents 📋
 
