@@ -7,7 +7,7 @@
 
 * [Introduction](#introduction)
 * [Competition Overview](#competition-overview)
-* [Dataset](#dataset-💾)
+* [Dataset](#Dataset-💾)
 * [Methodology](#methodology-⚙️)
     * [Data Preprocessing](#data-preprocessing)
     * [Model Architecture](#model-architecture)
@@ -42,13 +42,21 @@ This repository documents our project for the **BirdCLEF 2025 competition**. The
 * **Dataset Name:** BirdCLEF 2025 Official Dataset
 * **Source:** Data is primarily sourced from [xeno-canto.org](https://xeno-canto.org/) and the [Macaulay Library at the Cornell Lab of Ornithology](https://www.macaulaylibrary.org/).
 * **Description:**
-    * The training data consists of a collection of audio recordings, each labeled with the bird species present.
-    * Recordings come from diverse geographical locations and environments, leading to a wide range of acoustic conditions and background noise levels.
-    * Recordings can contain multiple bird species (multi-label).
-    * The test data will consist of continuous audio recordings (soundscapes).
-    * Specific details on the number of species, recording lengths, and audio formats will be provided with the data release by the competition organizers.
-* **Data Access:** Explain how to obtain the data (e.g., download link from the competition page, any required registration). *Do not include the data directly in your repository if it's against competition rules or too large.*
-* **External Data (if used):** Clearly state if you used any external datasets, their sources, and how they were incorporated, ensuring compliance with competition rules.
+    * The training dataset (`train.csv`) comprises 28,564 entries and 13 columns.
+    * The associated taxonomy data (`taxonomy.csv`) includes 206 unique bird species across 5 columns.
+    * The dataset is characterized by minimal missing data, with missing values occurring only in geographical coordinates (latitude and longitude, 809 missing values each).
+    * No duplicate records were found in the training data.
+    * Recordings originate from diverse geographical locations and varied environments, resulting in a wide range of acoustic conditions and background noise levels. The EDA revealed a broad geographic spread, though some geographical outliers (514 identified via IQR) exist.
+    * Recordings can contain multiple bird species (multi-label), as indicated by the `secondary_labels` column.
+    * Audio quality ratings (from 0 to 5) are generally consistent, with no extreme outliers detected via the IQR method.
+    * A significant finding from the EDA is the pronounced imbalance in both species counts (some species are much more frequent than others) and collection sources (the "XC" collection is dominant). This may require special handling during model development.
+    * The dataset includes different types of audio files:
+        * `train_audio`: 28,564 individual recordings.
+        * `train_soundscapes`: 9,726 continuous soundscape recordings.
+        * `test_soundscapes`: 1 continuous soundscape recording (as per the EDA file provided). *(Note: The final test set for the competition will likely be larger and released later by the organizers).*
+    * The primary task involves processing these audio recordings (especially the test soundscapes) to automatically provide a multi-label list of bird species present.
+    * Merging training data with taxonomy data confirmed complete species classification for all entries in `train.csv`.
+* **Data Access:** Direct access on Kaggle notebook/competition.
   
 ---
 
