@@ -18,18 +18,6 @@
 * [Results](#results-📊)
     * [Validation Performance](#validation-performance)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
-* [Setup and Installation](#setup-and-installation-🛠️)
-    * [Prerequisites](#prerequisites)
-    * [Installation Steps](#installation-steps)
-* [Usage: Running the Notebooks](#usage-running-the-notebooks-🚀)
-    * [Data Preparation](#data-preparation-1)
-    * [Training the Model](#training-the-model-1)
-    * [Generating Predictions/Submissions](#generating-predictionssubmissions-1)
-    * [Exploring the Notebooks](#exploring-the-notebooks)
-* [Repository Structure](#repository-structure-📂)
-* [Key Learnings/Challenges](#key-learningschallenges-💡)
-* [Future Work](#future-work-🔮)
-* [Team (if applicable)](#team-if-applicable-👥)
 * [Acknowledgments](#acknowledgments-🙏)
 * [License](#license-📜)
 
@@ -37,34 +25,33 @@
 
 ## Introduction
 
-Expand on the initial introduction. What was the specific task within BirdCLEF you addressed? What makes this problem interesting or challenging? Briefly state your overall approach. Mention that the code and experiments are primarily presented in Jupyter Notebooks for clarity and step-by-step execution.
+This repository documents our project for the **BirdCLEF 2025 competition**. The primary goal is to identify bird species from continuous audio recordings, a challenging multi-label classification task. Our entire workflow, from data exploration and preprocessing to model training and submission generation, is presented through a series of Jupyter Notebooks for clarity and reproducibility. We aim to develop an efficient model for diverse acoustic environments.
 
 ---
 
 ## Competition Overview
 
-* **Competition Name:** BirdCLEF [Year] - LifeCLEF Bird Identification Task
-* **Organizer:** [e.g., CLEF Initiative, Cornell Lab of Ornithology, Xeno-canto]
-* **Objective:** Briefly describe the main goal as stated by the organizers (e.g., identify bird species from audio recordings, estimate species presence in soundscapes).
-* **Evaluation Metric:** Specify the metric used for ranking (e.g., Mean Average Precision (mAP), F1-score, CMAP).
-* **Link to Competition:** [Provide the official competition link (e.g., Kaggle, ImageCLEF website)]
+* **Competition Name:** BirdCLEF 2025
+* **Organizer:** LifeCLEF in partnership with the Cornell Lab of Ornithology, Macaulay Library, and xeno-canto.
+* **Objective:** To develop a system that can process continuous audio recordings from various locations and automatically provide a multi-label list of bird species present in each recording.
+* **Evaluation Metric:** macro-averaged ROC-AUC
+* **Link to Competition:** [https://www.kaggle.com/competitions/birdclef-2025/overview](https://www.kaggle.com/competitions/birdclef-2025/overview)
 
 ---
 
 ## Dataset 💾
 
-* **Dataset Name:** BirdCLEF [Year] Official Dataset
-* **Source:** [e.g., Xeno-canto, Macaulay Library]
+* **Dataset Name:** BirdCLEF 2025 Official Dataset
+* **Source:** Data is primarily sourced from [xeno-canto.org](https://xeno-canto.org/) and the [Macaulay Library at the Cornell Lab of Ornithology](https://www.macaulaylibrary.org/).
 * **Description:**
-    * Total size of the training/test data.
-    * Number of bird species.
-    * Duration of audio clips (e.g., variable length, 5-second segments).
-    * Audio format (e.g., .ogg, .wav, .mp3).
-    * Sampling rate.
-    * Any specific characteristics (e.g., noisy environments, overlapping calls, primary vs. secondary labels).
+    * The training data consists of a collection of audio recordings, each labeled with the bird species present.
+    * Recordings come from diverse geographical locations and environments, leading to a wide range of acoustic conditions and background noise levels.
+    * Recordings can contain multiple bird species (multi-label).
+    * The test data will consist of continuous audio recordings (soundscapes).
+    * Specific details on the number of species, recording lengths, and audio formats will be provided with the data release by the competition organizers.
 * **Data Access:** Explain how to obtain the data (e.g., download link from the competition page, any required registration). *Do not include the data directly in your repository if it's against competition rules or too large.*
-* **External Data (if used):** Clearly state if you used any external datasets, their sources, and how they were incorporated.
-
+* **External Data (if used):** Clearly state if you used any external datasets, their sources, and how they were incorporated, ensuring compliance with competition rules.
+  
 ---
 
 ## Methodology ⚙️
