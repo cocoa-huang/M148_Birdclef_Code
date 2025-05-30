@@ -12,7 +12,7 @@
     * [Data Preprocessing](#data-preprocessing)
     * [Model Architecture](#model-architecture-&-training)
     * [Training](#training)
-* [Inference/Submission](#inference-submission)
+* [Inference Submission](#inference-submission)
 * [Results](#results)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
 
@@ -81,7 +81,7 @@ This is the core section detailing your solution. You can either summarize the m
 * **Final Model Training with pseudolabeled data plus labeled data:** `08_train_pseudo_labeled_model_efficientenet_b0.ipynb` - Final model training utilizing the combined dataset (pseudolabel + original label)
   
 ---
-### Inference/Submission
+### Inference Submission
 
 * **Notebook:** `inference_submissions.ipynb` 
 * **Summary:** Notebook that load saved model and make competition submission
