@@ -7,13 +7,13 @@
 
 * [Introduction](#introduction)
 * [Competition Overview](#competition-overview)
-* [Dataset](#Dataset-💾)
-* [Methodology](#methodology-⚙️)
+* [Dataset](#Dataset)
+* [Methodology](#methodology)
     * [Data Preprocessing](#data-preprocessing)
     * [Model Architecture](#model-architecture)
     * [Training](#training)
 * [Inference/Submission](#inference/submission)
-* [Results](#results-📊)
+* [Results](#results)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
 
 ---
