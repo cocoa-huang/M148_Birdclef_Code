@@ -14,7 +14,6 @@
     * [Training](#training)
     * [Post-processing/Ensemble (if any)](#post-processingensemble-if-any)
 * [Results](#results-📊)
-    * [Validation Performance](#validation-performance)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
 
 ---
