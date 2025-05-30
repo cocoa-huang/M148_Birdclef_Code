@@ -36,7 +36,7 @@ This repository documents our project for the **BirdCLEF 2025 competition**. The
 
 ## Dataset 💾
 
-* **Dataset Name:** BirdCLEF 2025 Official Dataset
+* **Dataset Name:** [BirdCLEF 2025 Official Dataset](https://www.kaggle.com/competitions/birdclef-2025/data)
 * **Source:** Data is primarily sourced from [xeno-canto.org](https://xeno-canto.org/) and the [Macaulay Library at the Cornell Lab of Ornithology](https://www.macaulaylibrary.org/).
 * **Description:**
     * The training dataset (`train.csv`) comprises 28,564 entries and 13 columns.
