@@ -66,8 +66,16 @@ This is the core section detailing your solution. You can either summarize the m
 
 ### Data Preprocessing
 
-* **Notebook:** `notebooks/01_data_preprocessing.ipynb` (or your chosen descriptive name)
-* **Summary:** Describe audio loading, resampling, feature extraction (spectrograms like Mel, STFT, CQT with parameters), data augmentation techniques, handling class imbalance, and your train/validation split strategy.
+* **Exploratory Data Analysis (EDA):**
+    * `01_EDA.ipynb` - Initial analysis to understand dataset structure, characteristics (species diversity, imbalance, noise, audio properties), and inform subsequent processing and modeling decisions.
+* **Voice Activity Detection (VAD) - Human Voice Removal:**
+    * `02_data_prep_train_audio.ipynb` - Human speech removal from `train_audio` files using the SileroVAD model. This was applied to the ~21,000 `train_audio` files containing labeled bird species.
+    * `03_data_prep_train_soundscapes.ipynb` - Human speech removal from all `train_soundscapes` files using the SileroVAD model.
+* **Audio Segmentation & Mel Spectrogram Generation:**
+    * `04_data_prep_train_audio_mel_spec.ipynb` - Conversion of processed `train_audio` files into mel spectrograms. This implicitly follows segmentation into 5-second chunks.
+    * `05_data_prep_segment_melspec_train_soundscapes.ipynb` - Segmentation of processed `train_soundscapes` into 5-second chunks and their conversion into mel spectrograms.
+    * **Spectrogram Parameters:** Sample Rate: 32,000 Hz, FFT Window Size (n\_fft): 1024, Hop Length: 512, Mel Bins: 128, Window Function: Hann. Final Output Shape: Resized to (1, 256, 256).
+* **Pseudo-Label Generation:**
 
 ### Model Architecture
 
