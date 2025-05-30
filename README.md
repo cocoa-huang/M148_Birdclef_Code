@@ -57,7 +57,7 @@ This repository documents our project for the **BirdCLEF 2025 competition**. The
   
 ---
 
-## Methodology ⚙️
+## Methodology
 
 This is the core section detailing your solution. You can either summarize the methodology here and point to specific notebooks for details, or detail it directly.
 
@@ -89,7 +89,7 @@ This is the core section detailing your solution. You can either summarize the m
 
 ---
 
-## Results 📊
+## Results
 
 ### Competition Score (Public/Private LB)
 
