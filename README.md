@@ -12,7 +12,7 @@
     * [Data Preprocessing](#data-preprocessing)
     * [Model Architecture](#model-architecture)
     * [Training](#training)
-    * [Post-processing/Ensemble (if any)](#post-processingensemble-if-any)
+* [Inference/Submission](#inference/submission)
 * [Results](#results-📊)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
 
@@ -72,7 +72,6 @@ This is the core section detailing your solution. You can either summarize the m
     * `04_data_prep_train_audio_mel_spec.ipynb` - Conversion of processed `train_audio` files into mel spectrograms. This implicitly follows segmentation into 5-second chunks.
     * `05_data_prep_segment_melspec_train_soundscapes.ipynb` - Segmentation of processed `train_soundscapes` into 5-second chunks and their conversion into mel spectrograms.
     * **Spectrogram Parameters:** Sample Rate: 32,000 Hz, FFT Window Size (n\_fft): 1024, Hop Length: 512, Mel Bins: 128, Window Function: Hann. Final Output Shape: Resized to (1, 256, 256).
-* **Pseudo-Label Generation:**
 
 ### Model Architecture & Training
 
