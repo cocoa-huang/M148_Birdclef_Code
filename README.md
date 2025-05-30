@@ -85,7 +85,6 @@ This is the core section detailing your solution. You can either summarize the m
 
 * **Notebook:** `inference_submissions.ipynb` 
 * **Summary:** Notebook that load saved model and make competition submission
----
 
 ---
 
