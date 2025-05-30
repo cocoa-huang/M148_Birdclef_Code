@@ -7,12 +7,12 @@
 
 * [Introduction](#introduction)
 * [Competition Overview](#competition-overview)
-* [Dataset](#Dataset)
+* [Dataset](#dataset)
 * [Methodology](#methodology)
     * [Data Preprocessing](#data-preprocessing)
-    * [Model Architecture](#model-architecture)
+    * [Model Architecture](#model-architecture-&-training)
     * [Training](#training)
-* [Inference/Submission](#inference/submission)
+* [Inference/Submission](#inference-submission)
 * [Results](#results)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
 
@@ -34,7 +34,7 @@ This repository documents our project for the **BirdCLEF 2025 competition**. The
 
 ---
 
-## Dataset 💾
+## Dataset
 
 * **Dataset Name:** [BirdCLEF 2025 Official Dataset](https://www.kaggle.com/competitions/birdclef-2025/data)
 * **Source:** Data is primarily sourced from [xeno-canto.org](https://xeno-canto.org/) and the [Macaulay Library at the Cornell Lab of Ornithology](https://www.macaulaylibrary.org/).
@@ -79,12 +79,13 @@ This is the core section detailing your solution. You can either summarize the m
 * **ResNet model training:** `06_train_initial_CNN_model.py` - Pseudolabel generation using baseline model
 * **Pseudolabel Generation:** `07_pseudo_label_generation.ipynb` - Pseudolabel generation using baseline model
 * **Final Model Training with pseudolabeled data plus labeled data:** `08_train_pseudo_labeled_model_efficientenet_b0.ipynb` - Final model training utilizing the combined dataset (pseudolabel + original label)
-
-
+  
+---
 ### Inference/Submission
 
 * **Notebook:** `inference_submissions.ipynb` 
 * **Summary:** Notebook that load saved model and make competition submission
+---
 
 ---
 
