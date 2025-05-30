@@ -16,8 +16,6 @@
 * [Results](#results-📊)
     * [Validation Performance](#validation-performance)
     * [Competition Score (Public/Private LB)](#competition-score-publicprivate-lb)
-* [Acknowledgments](#acknowledgments-🙏)
-* [License](#license-📜)
 
 ---
 
@@ -77,37 +75,25 @@ This is the core section detailing your solution. You can either summarize the m
     * **Spectrogram Parameters:** Sample Rate: 32,000 Hz, FFT Window Size (n\_fft): 1024, Hop Length: 512, Mel Bins: 128, Window Function: Hann. Final Output Shape: Resized to (1, 256, 256).
 * **Pseudo-Label Generation:**
 
-### Model Architecture
+### Model Architecture & Training
 
-* **Notebook:** `notebooks/02_model_definition.ipynb` (or where the model is primarily defined/used)
-* **Summary:** Specify base models (e.g., ResNet, EfficientNet, PANNs), pre-trained weights, modifications, input/output shapes. A textual description or a link to a cell in the notebook showing the model summary would be good.
+* **Initial EfficientNet_b0 model:** `06_train_initial_model_efficientnet_b0.ipynb` - Training a baseline model on `train_audio` mel spectrogram, used in later pseudolabel generation
+* **ResNet model training:** `06_train_initial_CNN_model.py` - Pseudolabel generation using baseline model
+* **Pseudolabel Generation:** `07_pseudo_label_generation.ipynb` - Pseudolabel generation using baseline model
+* **Final Model Training with pseudolabeled data plus labeled data:** `08_train_pseudo_labeled_model_efficientenet_b0.ipynb` - Final model training utilizing the combined dataset (pseudolabel + original label)
 
-### Training
 
-* **Notebook:** `notebooks/03_model_training.ipynb`
-* **Summary:** Detail the framework (PyTorch, TensorFlow), optimizer, loss function, batch size, epochs, learning rate schedule, and regularization techniques.
+### Inference/Submission
 
-### Post-processing/Ensemble (if any)
-
-* **Notebook:** `notebooks/04_prediction_and_submission.ipynb` (or a dedicated ensemble notebook)
-* **Summary:** Explain thresholding strategies, ensembling methods if used, and how predictions for long audio files were handled.
+* **Notebook:** `inference_submissions.ipynb` 
+* **Summary:** Notebook that load saved model and make competition submission
 
 ---
 
 ## Results 📊
 
-Present your key findings and performance. You can include screenshots of relevant plots from your notebooks or summarize the key metrics.
-
-### Validation Performance
-
-* Reference the notebook where validation results are calculated (e.g., `notebooks/03_model_training.ipynb` or a separate `notebooks/05_evaluation.ipynb`).
-* Show your best model's performance on your local validation set using the competition metric.
-* Include other relevant metrics or visualizations (e.g., confusion matrices).
-
 ### Competition Score (Public/Private LB)
 
-* **Public Leaderboard Score:** [Your score] (Rank: [Your rank])
-* **Private Leaderboard Score:** [Your score] (Rank: [Your rank])
-* Link to your Kaggle submission or team profile if desired.
+* **Public Leaderboard Score:** **0.787**
 
 ---
